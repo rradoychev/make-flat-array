@@ -18,7 +18,7 @@ export function makeFlatArray(array = [], depth = 1) {
             item.forEach(each);
         });
       }
-      for (i = 0; i < depth; i++) {
+      for (let i = 0; i < depth; i++) {
         flattenArray = [].concat.apply([], flattenArray);
       }
     }

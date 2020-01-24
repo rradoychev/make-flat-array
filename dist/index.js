@@ -21,12 +21,12 @@ function makeFlatArray() {
     if (typeof depth === "number" && depth > 0) {
       if (depth === Infinity) {
         depth = 0;
-        arr4.forEach(function each(item) {
+        array.forEach(function each(item) {
           if (Array.isArray(item)) depth++, item.forEach(each);
         });
       }
 
-      for (i = 0; i < depth; i++) {
+      for (var i = 0; i < depth; i++) {
         flattenArray = [].concat.apply([], flattenArray);
       }
     }
