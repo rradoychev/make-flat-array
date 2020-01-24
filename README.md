@@ -1,7 +1,7 @@
 Package for flattening arrays. Alternative to .flat()
 Compatible with ES5, ES6.
 
-# Make array flat
+# Make flat array
 
 
 ### How to use
@@ -14,7 +14,7 @@ yarn add @x3m/make-flat-array;
 
 Import the makeFlatArray into your file:
 ```
-import { makeFlattArray } from "@x3m/make-flat-array";
+import { makeFlatArray } from "@x3m/make-flat-array";
 ```
 
 You can also require it, or simply add it in ``<script></script>`` tag.
