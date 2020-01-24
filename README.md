@@ -17,7 +17,7 @@ Import the makeFlatArray into your file:
 import { makeFlattArray } from "@x3m/make-flat-array";
 ```
 
-You can also require it, or simply add it in <script></script> tag.
+You can also require it, or simply add it in ``<script></script>`` tag.
 
 Example usage:
 ```
