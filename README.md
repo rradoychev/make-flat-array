@@ -17,9 +17,7 @@ Import the makeFlatArray into your file:
 import { makeFlattArray } from "@x3m/make-flat-array";
 ```
 
-It can be used without import, too, just add the .js file from the dist/ folder.
-
-Use one of the following examples to embed:
+You can also require it, or simply add it in <script></script> tag.
 
 Example usage:
 ```
