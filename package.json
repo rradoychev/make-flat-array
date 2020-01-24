@@ -1,6 +1,6 @@
 {
   "name": "@x3m/make-flat-array",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "babel": {
     "presets": [
