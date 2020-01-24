@@ -12,7 +12,7 @@ export function makeFlatArray(array = [], depth = 1) {
     if (typeof depth === "number" && depth > 0) {
       if (depth === Infinity) {
         depth = 0;
-        arr4.forEach(function each(item) {
+        array.forEach(function each(item) {
           if (Array.isArray(item))
             depth++,
             item.forEach(each);
