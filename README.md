@@ -1,4 +1,5 @@
 Package for flattening arrays. Alternative to .flat()
+Compatible with ES5, ES6.
 
 # Make array flat
 
@@ -28,4 +29,4 @@ depth - from 1 to Infinity (if set to Infinity, it will automatically determine 
 makeFlatArray(['1','2',['3','4']], 1);
 ```
 
-This package is alternative to the es6 .flat().
+This package is alternative to the ES2019 .flat()
