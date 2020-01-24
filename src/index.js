@@ -1,56 +1,28 @@
 /**
- * ReactMixerEmbed
+ * makeFlatArray
+ * Function that flattens arrays.
  * 
- * @description: Lightweight component for embedding mixer into React applications.
- * @author: rradoychev
- * 
- * Available options:
- * =============================================================================
- * DEFAULT SETTINGS - the video will be embed by default. 
- * Use the following options to change the settings:
- * video (optional) - can set to false to disable the video.
- * chat (optional) - set to true to embed chat next to the video.
- * channel - the channel name.
- * =============================================================================
- * 
- * Example usage:
- * <ReactMixerEmbed options={{
- *  channel: "mixer",
- *  chat: true
- * }} />
- * 
- * @param {*} options Add options to the embedded element
+ * @param { array } array - The array that we want to flatten.
+ * @param { number } depth - The depth of the flattening.
  */
 
-import React from 'react';
-
-const ReactMixerEmbed = ({
-  options = {
-    channel: "mixer", 
-    video: true,
-    chat: false
+export function makeFlatArray(array = [], depth = 1) {
+  let flattenArray = array;
+  if (array.length > 0 && depth) {
+    if (typeof depth === "number" && depth > 0) {
+      if (depth === Infinity) {
+        depth = 0;
+        arr4.forEach(function each(item) {
+          if (Array.isArray(item))
+            depth++,
+            item.forEach(each);
+        });
+      }
+      for (i = 0; i < depth; i++) {
+        flattenArray = [].concat.apply([], flattenArray);
+      }
+    }
   }
-}) => {
-  const { channel, video = true, chat } = options;
-  const embedClassName = "react-mixer-embed-wrapper";
 
-  return (
-    <>
-      {video &&
-        <iframe 
-          className={`${embedClassName} video`}
-          title={`Mixer video embed for ${channel}`} 
-          src={`https://mixer.com/embed/player/${channel}`}></iframe>
-      }
-
-      {chat && 
-        <iframe 
-          className={`${embedClassName} chat`}
-          title={`Mixer chat embed for ${channel}`} 
-          src={`https://mixer.com/embed/chat/${channel}`}></iframe>
-      }
-    </>
-  );
+  return flattenArray;
 }
-
-export default ReactMixerEmbed;

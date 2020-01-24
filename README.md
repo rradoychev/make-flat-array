@@ -1,57 +1,31 @@
-Lightweight component for embedding mixer.com video and chat into React applications.
+Package for flattening arrays. Alternative to .flat()
 
-# React Mixer Embed Video and Chat
-
-### Available options:
- * =============================================================================
- * DEFAULT SETTINGS - the video will be embed by default. 
- * Use the following options to change the settings:
- * video (optional) - can set to false to disable the video.
- * chat (optional) - set to true to embed chat next to the video.
- * channel - the channel name.
- * =============================================================================
+# Make array flat
 
 
 ### How to use
 Install the component with npm OR yarn:
 ```
-npm install react-mixer-embed;
+npm install @x3m/make-flat-array;
 OR
-yarn add react-mixer-embed;
+yarn add @x3m/make-flat-array;
 ```
 
-Import the ReactMixerEmbed into your file:
+Import the makeFlatArray into your file:
 ```
-import ReactMixerEmbed from "react-mixer-embed";
+import { makeFlattArray } from "@x3m/make-flat-array";
 ```
+
+It can be used without import, too, just add the .js file from the dist/ folder.
 
 Use one of the following examples to embed:
 
-Default embed:
+Example usage:
 ```
-<ReactMixerEmbed options={{ 
-  channel: "mixer" 
-}} />
+makeFlatArray(array, depth);
+depth - from 1 to Infinity (if set to Infinity, it will automatically determine how much times it is needed to produce fully flatten array)
+
+makeFlatArray(['1','2',['3','4']], 1);
 ```
 
-Video and chat embed:<br />
-```
-<ReactMixerEmbed options={{ 
-  channel: "mixer",
-  chat: true
-}} />
-```
-
-Chat only embed:<br />
-```
-<ReactMixerEmbed options={{ 
-  channelName: "mixer",
-  video: false,
-  chat: true
-}} />
-```
-
-This package is only if you want to have a react component inside your directory, 
-which you reuse across the application.
-
-However, for very basic and most lightweight solution, head to https://dev.mixer.com/guides/embeds/introduction
+This package is alternative to the es6 .flat().

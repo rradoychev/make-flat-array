@@ -1,36 +1,30 @@
 {
-  "name": "react-mixer-embed",
-  "version": "0.1.15",
+  "name": "@x3m/make-flat-array",
+  "version": "1.0.0",
   "private": false,
   "babel": {
     "presets": [
-      "@babel/preset-react",
       "@babel/preset-env"
     ]
-  },
-  "dependencies": {
-    "react": "^16.12.0"
   },
   "scripts": {
     "publish": "rm -rf dist && mkdir dist &&  babel ./src -d dist --copy-files"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3"
   },
   "keywords": [
-    "mixer",
-    "mixer embed",
-    "react mixer"
+    "array",
+    "flatten",
+    "for",
+    "concat"
   ],
   "author": "rradoychev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rradoychev/react-mixer-embed/issues"
+    "url": "https://github.com/rradoychev/make-flat-array/issues"
   },
-  "homepage": "https://github.com/rradoychev/react-mixer-embed"
+  "homepage": "https://github.com/rradoychev/make-flat-array"
 }
